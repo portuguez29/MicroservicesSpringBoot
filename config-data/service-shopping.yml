@@ -47,13 +47,3 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8094/eureka/
-
-reddit:
-  ribbon:
-    listOfServers: www.reddit.com:443
-    ConnectTimeout: 20000
-    ReadTimeout: 20000
-    IsSecure: true
-hystrix.command.default.execution:
-  timeout.enabled: true
-  isolation.thread.timeoutInMilliseconds: 50000
