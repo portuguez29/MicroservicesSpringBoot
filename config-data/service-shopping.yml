@@ -37,12 +37,6 @@ spring:
     defer-datasource-initialization: true
 
 logging:
-  level:
-    com:
-      baeldung:
-        cloud:
-          openfeign:
-            client: DEBUG
   pattern:
     console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"
 
