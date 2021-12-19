@@ -5,6 +5,7 @@
     <file type="web" url="file://$PROJECT_DIR$/service-config" />
     <file type="web" url="file://$PROJECT_DIR$/service-customer" />
     <file type="web" url="file://$PROJECT_DIR$/service-product" />
+    <file type="web" url="file://$PROJECT_DIR$/service-registry" />
     <file type="web" url="file://$PROJECT_DIR$/service-shopping" />
   </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="11" project-jdk-type="JavaSDK" />
