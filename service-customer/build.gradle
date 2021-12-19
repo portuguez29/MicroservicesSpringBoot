@@ -19,14 +19,16 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa' //para usar BD
     implementation 'org.springframework.boot:spring-boot-starter-web'
     compileOnly 'org.projectlombok:lombok'
-    runtimeOnly 'com.h2database:h2'
+    runtimeOnly 'com.h2database:h2' //BD embebida
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    implementation 'org.springframework.boot:spring-boot-starter-json:2.6.1'
-    implementation 'org.springframework.boot:spring-boot-starter-validation:2.6.1'
+    implementation 'org.springframework.boot:spring-boot-starter-json:2.6.1' //jason
+    implementation 'org.springframework.boot:spring-boot-starter-validation:2.6.1' //validator
+    implementation 'org.springframework.cloud:spring-cloud-starter-config:3.1.0'//para el config service
+    implementation 'org.springframework.cloud:spring-cloud-starter-bootstrap:3.1.0'
 
 }
 
