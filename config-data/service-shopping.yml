@@ -44,16 +44,13 @@ logging:
 
 Feign:
   hystrix:
-    dashboard:
-      proxy-stream-allow-list:
-        - 'localhost'
     enabled: true
 
 management:
   endpoints:
     web:
       exposure:
-        include: 'hystrix.stream'
+        include: hystrix.stream
 
 eureka:
   client:
