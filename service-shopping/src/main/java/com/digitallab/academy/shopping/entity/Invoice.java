@@ -1,5 +1,6 @@
 package com.digitallab.academy.shopping.entity;
 
+import com.digitallab.academy.shopping.model.Customer;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 
@@ -26,6 +27,10 @@ public class Invoice {
     @Temporal(TemporalType.DATE)
     private Date createAt;
     private String state;
+    //No se va a guardar en la BD por eso se pone @Transient
+    @Transient
+    private Customer customer;
+
     @Valid
     @JsonIgnoreProperties({"hibernateLazyInitializer","handler"})
     @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY)

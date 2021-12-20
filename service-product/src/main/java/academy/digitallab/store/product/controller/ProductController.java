@@ -45,7 +45,7 @@ public class ProductController {
 
 
     @GetMapping("/getProduct/{id}")
-    public ResponseEntity getProduct(@PathVariable Long id){
+    public ResponseEntity<Product> getProduct(@PathVariable Long id){
         Product product = productService.getProduct(id);
         if(product == null){
             return ResponseEntity.notFound().build();
@@ -71,9 +71,16 @@ public class ProductController {
         return new ResponseEntity(productService.updateProduct(product),HttpStatus.OK);
     }
 
+    /* public ResponseEntity updateStock(@PathVariable Long id,@RequestBody Product product){
+           return new ResponseEntity(productService.updateStock(id,product.getStock()),HttpStatus.OK);
+       }*/
     @PostMapping("/updateStock/{id}")
-    public ResponseEntity updateStock(@PathVariable Long id,@RequestBody Product product){
-        return new ResponseEntity(productService.updateStock(id,product.getStock()),HttpStatus.OK);
+    public ResponseEntity<Product> updateStock(@PathVariable  Long id ,@RequestParam(name = "quantity", required = true) Double quantity){
+        Product product = productService.updateStock(id, quantity);
+        if (product == null){
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok(product);
     }
 
     private String formatMessage(BindingResult result){

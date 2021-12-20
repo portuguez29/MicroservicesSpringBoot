@@ -1,5 +1,6 @@
 package com.digitallab.academy.shopping.entity;
 
+import com.digitallab.academy.shopping.model.Product;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -19,6 +20,9 @@ public class InvoiceItem {
     @Transient
     private Double subtotal;
     private Double price;
+    //Porque no se va a guardar en la base de datos @Transient
+    @Transient
+    private Product product;
     @Column(name = "product_id")
     private Long productId;
 
