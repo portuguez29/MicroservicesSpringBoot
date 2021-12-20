@@ -51,6 +51,7 @@ management:
     web:
       exposure:
         include: "*"
+    base-path: /
 
 eureka:
   client:
