@@ -47,7 +47,7 @@ Feign:
     enabled: true
   hystrix:
     dashboard:
-      proxyStreamAllowList: "*"
+      proxy-stream-allow-list: '*'
     enabled: true
 
 management:
@@ -55,7 +55,7 @@ management:
     web:
       base-path: /
       exposure:
-        include: "*"
+        include: '*'
 
 eureka:
   client:
